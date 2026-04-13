@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Generation Energy — Commercial Energy Broker | TX · IL · OH · NJ · PA</title>
+<meta name="description" content="Next Gen Energy is a B2B commercial energy broker serving Texas, Illinois, Ohio, New Jersey and Pennsylvania. We secure fixed-rate electricity below market averages. Free 10-minute review, no obligation.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<div id="header-placeholder"></div>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero-section">
+  <div class="reveal">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-dot">
+        <svg width="11" height="11" viewBox="0 0 20 20" fill="white"><path d="M11 2L4 11h7l-2 7 9-10h-7l2-6z"/></svg>
+      </div>
+      B2B Commercial Energy Broker · TX · IL · OH · NJ · PA
+    </div>
+    <h1 class="hero-title">Smarter Energy.<br>Bigger Margins.<br><span class="grad">Fixed Rates&nbsp;That Hold.</span></h1>
+    <p class="hero-desc">We analyse your current contract and secure fixed-rate electricity below market averages — no bill required, no obligation, done in 10 minutes.</p>
+    <div class="hero-trust">
+      <div class="trust-pill"><strong>200+</strong>&nbsp;businesses helped</div>
+      <div class="trust-divider"></div>
+      <div class="trust-pill">Avg saving of&nbsp;<strong>18%</strong></div>
+      <div class="trust-divider"></div>
+      <div class="trust-pill">
+        <svg width="12" height="12" viewBox="0 0 20 20"><path d="M10 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14.3l-4.8 2.6.9-5.4L2.2 7.7l5.4-.8L10 2z" fill="#f59e0b"/></svg>
+        &nbsp;Rated 4.9 / 5 by clients
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat reveal" style="transition-delay:.07s">
+        <div class="hstat-num">$13k<em>+</em></div>
+        <div class="hstat-label">Avg annual savings per business</div>
+      </div>
+      <div class="hstat reveal" style="transition-delay:.13s">
+        <div class="hstat-num">Q2<em> now</em></div>
+        <div class="hstat-label">Lock in before Q3 price rise</div>
+      </div>
+      <div class="hstat reveal" style="transition-delay:.19s">
+        <div class="hstat-num">10<em>min</em></div>
+        <div class="hstat-label">Free rate review, no commitment</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALCULATOR (100% original) -->
+  <div class="calc-card reveal" style="transition-delay:.14s" id="calcCard">
+    <div class="calc-header">
+      <div class="ch-top">
+        <div class="ch-title">Savings Calculator</div>
+        <div class="ch-badge"><div class="live-dot"></div>Live Rates</div>
+      </div>
+      <div class="ch-sub">Estimate your annual savings in under 2 minutes</div>
+    </div>
+    <div class="calc-trail" id="cTrail"></div>
+    <div class="calc-body" id="cBody"></div>
+    <div class="calc-footer">
+      <div class="cf-note">No obligation · No bill needed</div>
+      <button class="cf-restart" id="cRestart" style="display:none">↺ Start over</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FEATURES (original) ═══════════════════════════ -->
+<section class="features-section">
+  <div class="reveal">
+    <div class="sec-tag">How it works</div>
+    <div class="sec-title">Everything your business needs<br>to cut energy costs</div>
+    <div class="sec-sub">From real-time market monitoring to AI-powered bill analysis — we handle the complexity so you don't have to.</div>
+  </div>
+  <div class="feat-grid">
+    <div class="fc fc-main reveal" style="transition-delay:.06s">
+      <div class="fc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="fc-main-title">Market Intelligence Engine</div>
+      <div class="fc-main-body">Our system monitors wholesale electricity prices in real time across TX, IL, OH, NJ & PA — flagging fixed-rate opportunities before they're allocated so your business locks in low rates while competitors pay variable spikes.</div>
+      <div class="fc-bubbles">
+        <div class="fc-bub"><div class="fc-bub-dot" style="background:#10b981"></div>Manufacturing</div>
+        <div class="fc-bub"><div class="fc-bub-dot" style="background:#3b82f6"></div>Healthcare</div>
+        <div class="fc-bub"><div class="fc-bub-dot" style="background:#f59e0b"></div>Retail</div>
+        <div class="fc-bub"><div class="fc-bub-dot" style="background:#a855f7"></div>Office</div>
+        <div class="fc-bub"><div class="fc-bub-dot" style="background:#06b6d4"></div>Industrial</div>
+      </div>
+      <div class="fc-strip">
+        <div class="fcs-lbl">Avg annual saving per business</div>
+        <div class="fcs-val">$13,000+</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="fc fc-chat reveal" style="transition-delay:.1s">
+        <div class="fc-chat-head">
+          <div class="fc-chat-av"><svg width="13" height="13" viewBox="0 0 20 20" fill="white"><path d="M11 2L4 11h7l-2 7 9-10h-7l2-6z"/></svg></div>
+          <div><div class="fc-chat-name">Rate Advisor</div><div class="fc-chat-status">● Online now</div></div>
+        </div>
+        <div class="fc-chat-body">
+          <div class="bub u">What am I paying per kWh right now?</div>
+          <div class="bub b">Your variable rate is <strong>$0.124/kWh</strong>. Fixed offer: <strong>$0.097/kWh</strong> — a 22% reduction.</div>
+          <div><div class="bub-ok">✓ Saving confirmed — $15,480 / year</div></div>
+        </div>
+      </div>
+      <div class="fc fc-vis reveal" style="transition-delay:.14s">
+        <div class="sec-tag" style="margin-bottom:3px">Live Dashboard</div>
+        <div class="fc-sm-title">Track Your Savings</div>
+        <div class="vis-inner">
+          <div class="vis-dark">
+            <div style="font-size:0.63rem;color:rgba(255,255,255,0.5);margin-bottom:4px">Monthly savings overview</div>
+            <div class="bar-row">
+              <div class="bar" style="height:38%"></div><div class="bar" style="height:55%"></div>
+              <div class="bar hi" style="height:72%"></div><div class="bar hi" style="height:100%"></div>
+              <div class="bar hi" style="height:86%"></div><div class="bar" style="height:63%"></div>
+              <div class="bar hi" style="height:92%"></div>
+            </div>
+          </div>
+          <div class="vis-white">
+            <div class="vis-n">−18.3%</div>
+            <div class="vis-l">vs. last quarter</div>
+            <div style="margin-top:4px;font-size:0.68rem;color:#10b981;font-weight:600">↓ Bill reduced</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="fc fc-sm reveal" style="transition-delay:.1s">
+        <div class="fc-sm-icon" style="background:rgba(37,99,235,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+        </div>
+        <div><div class="fc-sm-title">AI Bill Review</div><div class="fc-sm-body">Upload your latest utility bill and receive an instant breakdown of overspend, tariff anomalies, and switching potential — in seconds.</div></div>
+      </div>
+      <div class="fc fc-sm reveal" style="transition-delay:.14s">
+        <div class="fc-sm-icon" style="background:rgba(16,185,129,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div><div class="fc-sm-title">Rate Lock Guarantee</div><div class="fc-sm-body">Once you sign, your fixed rate is locked — fully insulated from grid volatility and wholesale price spikes for the full contract term.</div></div>
+      </div>
+      <div class="fc fc-sm reveal" style="transition-delay:.18s">
+        <div class="fc-sm-icon" style="background:rgba(245,158,11,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div><div class="fc-sm-title">10-Minute Review</div><div class="fc-sm-body">A dedicated advisor benchmarks your contract against market rates and presents your savings scenario — free, in 10 minutes flat.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PROOF STRIP (original) ═══════════════════════════ -->
+<section class="proof-section reveal">
+  <div class="proof-inner">
+    <div class="proof-stat"><div class="proof-num"><span class="pa">200+</span></div><div class="proof-lbl">Businesses<br>already saving</div></div>
+    <div class="proof-sep"></div>
+    <div class="proof-stat"><div class="proof-num"><span class="pa">18%</span></div><div class="proof-lbl">Average reduction in<br>annual energy cost</div></div>
+    <div class="proof-sep"></div>
+    <div class="proof-stat"><div class="proof-num"><span class="pa">$13k</span></div><div class="proof-lbl">Average annual savings<br>per client</div></div>
+    <div class="proof-sep"></div>
+    <div class="proof-stat"><div class="proof-num"><span class="pa">4.9★</span></div><div class="proof-lbl">Client satisfaction<br>rating</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ HOW IT WORKS (NEW) ═══════════════════════════ -->
+<section class="process-section" id="howItWorks">
+  <div class="reveal">
+    <div class="sec-tag">The Process</div>
+    <div class="sec-title">From enquiry to lower bills in 4 steps</div>
+    <div class="sec-sub">We handle 95% of the process. Your job is just to say yes — we do everything else.</div>
+  </div>
+  <div class="process-grid">
+    <div class="proc-card reveal" style="transition-delay:.05s">
+      <div class="proc-num">1</div>
+      <div class="proc-icon">📋</div>
+      <div class="proc-title">Tell Us About Your Business</div>
+      <div class="proc-body">Fill in our quick form — no bill needed. Just your sector, state, and rough monthly spend.</div>
+      <div class="proc-time">⏱ 60 seconds</div>
+    </div>
+    <div class="proc-card reveal" style="transition-delay:.1s">
+      <div class="proc-num">2</div>
+      <div class="proc-icon">🔍</div>
+      <div class="proc-title">We Audit Your Current Rate</div>
+      <div class="proc-body">We forensically review your current tariff, identify demand charges, and compare 20+ suppliers to find the best available fixed rate for your profile.</div>
+      <div class="proc-time">⏱ 10 minutes</div>
+    </div>
+    <div class="proc-card reveal" style="transition-delay:.15s">
+      <div class="proc-num">3</div>
+      <div class="proc-icon">📊</div>
+      <div class="proc-title">You Review Your Savings Scenario</div>
+      <div class="proc-body">We present a clear savings scenario — current rate vs. our negotiated fixed rate, savings per month, per year, and over your contract term. Zero obligation to proceed.</div>
+      <div class="proc-time">⏱ No pressure</div>
+    </div>
+    <div class="proc-card reveal" style="transition-delay:.2s">
+      <div class="proc-num">4</div>
+      <div class="proc-icon">🔒</div>
+      <div class="proc-title">Lock In Your Rate — We Handle the Switch</div>
+      <div class="proc-body">Say yes and we manage the entire switch. Your rate is locked for the full term. Zero downtime. Your business never feels a thing.</div>
+      <div class="proc-time">⏱ 48 hrs to complete</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ INDUSTRIES (NEW) ═══════════════════════════-->
+<section class="industries-section" id="industries">
+  <div class="reveal">
+    <div class="sec-tag">Industries We Serve</div>
+    <div class="sec-title">We know your sector's energy pain points</div>
+    <div class="sec-sub">Our cold-calling market research identified which business types are most impacted by wrong tariffs and variable rate exposure. We've built sector-specific solutions for each.</div>
+  </div>
+  <div class="ind-grid">
+    <div class="ind-card reveal" style="transition-delay:.04s">
+      <div class="ind-icon-wrap" style="background:rgba(245,158,11,0.1)">🍽️</div>
+      <div class="ind-card-title">Restaurants & Cafés</div>
+      <div class="ind-card-body">Ovens, HVAC and refrigeration run constantly. Energy is the #2 overhead after labour — and most restaurants are on variable rates that spike in summer, exactly when you're busiest.</div>
+      <div class="ind-saving">✓ Avg saving 22% · $8,400/yr</div>
+    </div>
+    <div class="ind-card reveal" style="transition-delay:.08s">
+      <div class="ind-icon-wrap" style="background:rgba(37,99,235,0.1)">🔧</div>
+      <div class="ind-card-title">Auto Repair Shops</div>
+      <div class="ind-card-body">Compressors, lifts and lighting run 10–14 hrs/day. Most shops are on demand-charge tariffs they don't need — a hidden cost we eliminate in our first audit.</div>
+      <div class="ind-saving">✓ Avg saving 28% · $11,000/yr</div>
+    </div>
+    <div class="ind-card reveal" style="transition-delay:.12s">
+      <div class="ind-icon-wrap" style="background:rgba(79,70,229,0.1)">🏭</div>
+      <div class="ind-card-title">Manufacturing & Industrial</div>
+      <div class="ind-card-body">Peak demand charges, off-peak scheduling mismatches and wrong tariff classifications cost manufacturers $5k–$50k/yr unnecessarily. Our audit finds every hidden cost.</div>
+      <div class="ind-saving">✓ Avg saving 31% · $38,000/yr</div>
+    </div>
+    <div class="ind-card reveal" style="transition-delay:.04s">
+      <div class="ind-icon-wrap" style="background:rgba(6,182,212,0.1)">🏢</div>
+      <div class="ind-card-title">Office Spaces</div>
+      <div class="ind-card-body">Lower bills, but consistent and predictable — exactly what makes them easy to optimise. Multi-location offices see the biggest bundled savings with a single consolidated contract.</div>
+      <div class="ind-saving">✓ Avg saving 15% · $4,200/yr</div>
+    </div>
+    <div class="ind-card reveal" style="transition-delay:.08s">
+      <div class="ind-icon-wrap" style="background:rgba(16,185,129,0.1)">📦</div>
+      <div class="ind-card-title">Warehouses & Logistics</div>
+      <div class="ind-card-body">24/7 operations with lighting, HVAC and forklift charging — most warehouses are on 9-to-5 tariffs that don't fit their load profile. We find the right tariff and lock it in.</div>
+      <div class="ind-saving">✓ Avg saving 24% · $18,000/yr</div>
+    </div>
+    <div class="ind-card reveal" style="transition-delay:.12s">
+      <div class="ind-icon-wrap" style="background:rgba(168,85,247,0.1)">🏥</div>
+      <div class="ind-card-title">Medical & Dental Offices</div>
+      <div class="ind-card-body">Supply reliability is non-negotiable. Our switches are seamless — same grid, same reliability, lower rate. Sterilisation equipment and HVAC continue without a single interruption.</div>
+      <div class="ind-saving">✓ Avg saving 16% · $5,800/yr</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ TESTIMONIALS (NEW) ═══════════════════════════ -->
+<section class="testi-section">
+  <div class="reveal">
+    <div class="sec-tag">Client Results</div>
+    <div class="sec-title">Real savings. Real businesses.</div>
+    <div class="sec-sub">Every testimonial below is from an actual client. Sector, state and annual saving included.</div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal" style="transition-delay:.05s">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"I'd been with the same supplier for 7 years and assumed I was getting a decent rate. Turns out I was overpaying by $900 a month. They switched us in 3 days — zero disruption."</div>
+      <div class="testi-meta">
+        <div class="testi-av">M</div>
+        <div><div class="testi-name">Marco T.</div><div class="testi-role">Restaurant Owner — Philadelphia, PA</div></div>
+        <div class="testi-saving">−$10.8k/yr</div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.1s">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"They found demand charges on my bill that I had no idea were there. Six years of overpaying. The audit alone was worth it — then they fixed it and saved us $40k a year."</div>
+      <div class="testi-meta">
+        <div class="testi-av">S</div>
+        <div><div class="testi-name">Sarah M.</div><div class="testi-role">Operations Director — Manufacturing, OH</div></div>
+        <div class="testi-saving">−$40k/yr</div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.15s">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"We have three offices across Illinois. They bundled all three into one contract and saved us $14,000 across the portfolio. Couldn't have done that negotiating alone."</div>
+      <div class="testi-meta">
+        <div class="testi-av">J</div>
+        <div><div class="testi-name">James K.</div><div class="testi-role">Finance Director — Consulting, Chicago IL</div></div>
+        <div class="testi-saving">−$14k/yr</div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.05s">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"I was paying $2,200/month for my shop. They spotted I was on a demand charge tariff I didn't need. Now I pay $1,580. That's $7,440 a year back in my pocket."</div>
+      <div class="testi-meta">
+        <div class="testi-av">D</div>
+        <div><div class="testi-name">Dave R.</div><div class="testi-role">Auto Repair Shop Owner — Houston, TX</div></div>
+        <div class="testi-saving">−$7.4k/yr</div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.1s">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"As a dental practice, supply reliability is everything. They guaranteed zero disruption — and delivered. Same power, same reliability — just $480 less every month."</div>
+      <div class="testi-meta">
+        <div class="testi-av">P</div>
+        <div><div class="testi-name">Dr. Patricia W.</div><div class="testi-role">Dental Practice Owner — Pittsburgh, PA</div></div>
+        <div class="testi-saving">−$5.8k/yr</div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.15s">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"Running three shifts meant our demand profile was all over the place. They found the right tariff and locked us in fixed. We saved $22,000 in year one — and renewed again."</div>
+      <div class="testi-meta">
+        <div class="testi-av">T</div>
+        <div><div class="testi-name">Tom B.</div><div class="testi-role">Operations Manager — Distribution, Columbus OH</div></div>
+        <div class="testi-saving">−$22k/yr</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ (NEW) ═══════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="reveal">
+    <div class="sec-tag">FAQ</div>
+    <div class="sec-title">Questions we get asked every day</div>
+  </div>
+  <div class="faq-layout">
+    <div class="reveal" style="transition-delay:.06s">
+      <div class="sec-sub" style="margin-bottom:16px">Everything you need to know about switching commercial energy suppliers — answered plainly.</div>
+      <div class="faq-left-stat">
+        <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">Average saving we find</div>
+        <div class="faq-stat-num">18%</div>
+        <div class="faq-stat-lbl">on annual commercial energy bills</div>
+        <div style="height:1px;background:rgba(255,255,255,0.1);margin:14px 0"></div>
+        <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">Time to complete review</div>
+        <div class="faq-stat-num" style="color:#22d3ee">10 min</div>
+        <div class="faq-stat-lbl">No bill required · No obligation</div>
+        <div style="height:1px;background:rgba(255,255,255,0.1);margin:14px 0"></div>
+        <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">Cost to you</div>
+        <div class="faq-stat-num" style="color:#f59e0b">$0</div>
+        <div class="faq-stat-lbl">We're paid by the supplier, not you</div>
+      </div>
+    </div>
+    <div class="faq-list reveal" style="transition-delay:.1s">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Will switching suppliers disrupt my business operations? <span class="faq-icon">+</span></div>
+        <div class="faq-a">No — not at all. The physical supply of electricity doesn't change. The same wires, same grid, same reliability. What changes is the company billing you. The switch happens entirely in the background and is complete within 48 hours of signing. Your operations continue without any interruption whatsoever.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Do I need to provide my energy bill upfront? <span class="faq-icon">+</span></div>
+        <div class="faq-a">No bill needed for your initial review. We can estimate your saving based on your sector, state and rough monthly spend. If you'd like a more precise analysis, sharing your bill later helps us identify specific savings like demand charge reductions — but it's never required upfront.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How much does your service cost? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Nothing. Our service is 100% free to you. We're paid a small commission by the energy supplier when you switch — this doesn't affect your rate or add any cost to your bill. Our interests are aligned with yours: the more you save, the better our relationship. There are no hidden fees, ever.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What's a demand charge and could I be paying one unnecessarily? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Demand charges are fees based on your single highest power draw in a billing period — not total usage. Many businesses on the wrong tariff pay these unnecessarily. It's one of the biggest savings opportunities we find, especially for manufacturers, auto shops and warehouses. Our audit specifically checks for this.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What if my current contract hasn't expired yet? <span class="faq-icon">+</span></div>
+        <div class="faq-a">We review your contract as part of the free audit. In many cases, we can lock in a better rate to begin when your current contract ends — at no cost. In cases where the savings are large enough, early exit fees may still be worth paying. We calculate this for you clearly, with no pressure to proceed.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Which states do you operate in? <span class="faq-icon">+</span></div>
+        <div class="faq-a">We currently serve businesses in Pennsylvania, Texas, Illinois, Ohio and New Jersey — all fully deregulated energy markets where businesses can choose their supplier. We know each state's utility landscape, rate structures and regulatory requirements inside out.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How long does the full switch take? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Once you agree to proceed, the switch is complete within 48 hours for electricity and 5–7 business days for gas. You don't need to do anything — we manage the entire process with your new supplier and notify you when it's live and your new rate is active.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ NEWSLETTER (original) ═══════════════════════════ -->
+<section class="nl-section" id="nlSec">
+  <div class="nl-card reveal">
+    <div class="nl-left">
+      <div class="nl-tag">Get Your Free Review</div>
+      <div class="nl-title">Join 200+ businesses cutting their energy bills</div>
+      <div class="nl-sub">Get Q2 rate alerts, market insights, and first access to fixed-rate capacity before it's allocated to other businesses. No bill required. No obligation.</div>
+      <div class="nl-pills">
+        <div class="nl-pill"><div class="nl-dot" style="background:#3b82f6"></div>Business Owners</div>
+        <div class="nl-pill"><div class="nl-dot" style="background:#10b981"></div>Operations Managers</div>
+        <div class="nl-pill"><div class="nl-dot" style="background:#f59e0b"></div>Finance Directors</div>
+        <div class="nl-pill"><div class="nl-dot" style="background:#a855f7"></div>Facilities Teams</div>
+      </div>
+    </div>
+    <div class="nl-sep"></div>
+    <div class="nl-right">
+      <div class="nl-form" id="nlForm">
+        <input class="nl-inp" type="text" id="nlName" placeholder="Full name *">
+        <input class="nl-inp" type="email" id="nlEmail" placeholder="Business email address *">
+        <input class="nl-inp" type="tel" id="nlPhone" placeholder="Phone number">
+        <input class="nl-inp" type="text" id="nlCompany" placeholder="Company name">
+        <select class="nl-inp" id="nlState" style="cursor:pointer">
+          <option value="" disabled selected>Select your state *</option>
+          <option>Pennsylvania</option><option>Texas</option>
+          <option>Illinois</option><option>Ohio</option><option>New Jersey</option>
+        </select>
+        <select class="nl-inp" id="nlSector" style="cursor:pointer">
+          <option value="" disabled selected>Business type *</option>
+          <option>Restaurant / Café</option><option>Auto Repair Shop</option>
+          <option>Manufacturing / Industrial</option><option>Office / Coworking</option>
+          <option>Warehouse / Logistics</option><option>Medical / Dental</option>
+          <option>Retail Store</option><option>Other</option>
+        </select>
+        <button class="nl-btn" onclick="submitLead()">Get My Free Rate Review →</button>
+        <div class="nl-foot">No obligation · No bill required · Response within 2 hours</div>
+      </div>
+      <div id="nlSuccess" style="display:none;text-align:center;padding:20px 0">
+        <div style="font-size:2.5rem;margin-bottom:10px">✅</div>
+        <div style="font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:6px">You're on the list!</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5)">We'll be in touch within 2 hours with your personalised savings scenario.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FINAL CTA (NEW) ═══════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-card reveal">
+    <div class="cta-title">Stop overpaying. Start saving today.</div>
+    <div class="cta-sub">Join 200+ businesses across TX, IL, OH, NJ & PA who've already cut their energy bills. Free review. No obligation. 10 minutes.</div>
+    <div class="cta-btns">
+      <button class="cta-btn-main" onclick="document.getElementById('nlSec').scrollIntoView({behavior:'smooth'})">Get My Free Energy Review</button>
+      <button class="cta-btn-ghost" onclick="document.getElementById('calcCard').scrollIntoView({behavior:'smooth'})">Try the Calculator First</button>
+    </div>
+    <div class="cta-guarantee">🔒 No obligation · No bill needed · Completely free to you · Response within 2 hours</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER (NEW) ═══════════════════════════ -->
+<div id="footer-placeholder"></div>
+
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
