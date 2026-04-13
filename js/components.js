@@ -37,7 +37,42 @@
     <button class="btn btn-ghost" onclick="var el=document.getElementById('nlSec');el?el.scrollIntoView({behavior:'smooth'}):window.location='${B}index.html#nlSec'">Sign Up</button>
     <button class="btn btn-primary" onclick="var el=document.getElementById('calcCard');el?el.scrollIntoView({behavior:'smooth'}):window.location='${B}index.html#calcCard'">Get Free Review</button>
   </div>
-</nav>`;
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <div class="nav-mobile-inner">
+    <div class="nav-mobile-header">
+      <a class="nav-mobile-logo" href="${B}index.html">
+        <div class="nav-logo-mark"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M11 2L4 11h7l-2 7 9-10h-7l2-6z" fill="white" stroke="white" stroke-width="0.5" stroke-linejoin="round"/></svg></div>
+        NEXT-GEN ENERGY
+      </a>
+      <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
+    </div>
+    <div class="nav-mobile-links">
+      <a href="${B}index.html">Home</a>
+      <a href="${B}index.html#howItWorks">How It Works</a>
+      <a href="${B}index.html#industries">Industries</a>
+      <div class="nav-mobile-section">
+        <div class="nav-mobile-sec-title">States</div>
+        <a href="${B}states/texas.html">TX — Texas</a>
+        <a href="${B}states/illinois.html">IL — Illinois</a>
+        <a href="${B}states/ohio.html">OH — Ohio</a>
+        <a href="${B}states/new-jersey.html">NJ — New Jersey</a>
+        <a href="${B}states/pennsylvania.html">PA — Pennsylvania</a>
+        <a class="nav-mobile-seeall" href="${B}states/index.html">See all states &amp; compare →</a>
+      </div>
+      <a href="${B}index.html#faq">FAQ</a>
+      <a href="${B}about.html">About</a>
+      <a href="${B}index.html#nlSec">Contact</a>
+    </div>
+    <div class="nav-mobile-cta">
+      <a class="btn btn-ghost nav-mob-link" href="${B}index.html#nlSec" style="width:100%;justify-content:center;text-decoration:none;display:flex">Sign Up</a>
+      <a class="btn btn-primary nav-mob-link" href="${B}index.html#nlSec" style="width:100%;justify-content:center;margin-top:8px;text-decoration:none;display:flex">Get Free Review</a>
+    </div>
+  </div>
+</div>`;
 
   var FOOTER = `<footer>
   <div class="footer-top">
@@ -184,6 +219,32 @@
       if (e.key === 'Escape') dropdownLi.classList.remove('open');
     });
   }
+
+  /* ── Mobile nav ── */
+  var hamburger = document.getElementById('navHamburger');
+  var mobileNav = document.getElementById('navMobile');
+  var mobileClose = document.getElementById('navMobileClose');
+
+  function openMobileNav() {
+    if (mobileNav) { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    if (hamburger) hamburger.classList.add('open');
+  }
+  function closeMobileNav() {
+    if (mobileNav) { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+    if (hamburger) hamburger.classList.remove('open');
+  }
+
+  if (hamburger) hamburger.addEventListener('click', openMobileNav);
+  if (mobileClose) mobileClose.addEventListener('click', closeMobileNav);
+  if (mobileNav) {
+    /* Click on backdrop closes menu */
+    mobileNav.addEventListener('click', function (e) { if (e.target === mobileNav) closeMobileNav(); });
+    /* Any link inside closes menu */
+    mobileNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMobileNav);
+    });
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMobileNav(); });
 
   /* ── Smooth scroll: intercept index.html#hash links when already on index ── */
   if (page === 'index.html' || page === '') {
