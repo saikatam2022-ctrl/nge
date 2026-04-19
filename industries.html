@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industries We Serve | Commercial Energy Broker — Next Gen Energy</title>
+<meta name="description" content="Next Gen Energy helps businesses across 15 industries — manufacturing, healthcare, restaurants, retail, hospitality, education, nonprofits and more — lock in fixed-rate electricity below market average. Free audit.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+/* ── INDUSTRIES HERO ── */
+.ind-hero {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 52px 64px;
+  text-align: center;
+}
+.ind-hero-inner { max-width: 760px; margin: 0 auto; }
+.ind-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.18);
+  border-radius: 40px;
+  padding: 5px 16px 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--blue);
+  margin-bottom: 22px;
+}
+.ind-hero-eyebrow-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--indigo));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ind-hero-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2rem, 3.8vw, 3.1rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  margin-bottom: 20px;
+}
+.ind-hero-title .grad {
+  background: linear-gradient(130deg, var(--blue-light) 0%, var(--indigo) 60%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ind-hero-sub {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.72;
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+.ind-hero-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.ind-hero-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  padding: 7px 16px;
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  box-shadow: var(--shadow-sm);
+  font-weight: 500;
+}
+
+/* ── FEATURE STRIP ── */
+.ind-feat-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 52px 64px;
+}
+.ind-feat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+.ind-feat-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 26px 22px;
+  transition: all .3s;
+}
+.ind-feat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(37,99,235,0.3);
+}
+.ind-feat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+.ind-feat-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.ind-feat-body {
+  font-size: 0.76rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+/* ── INDUSTRY CARDS PAGE GRID ── */
+.ind-page-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 52px 64px;
+}
+.ind-page-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+.ind-page-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px 20px;
+  transition: all .3s;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ind-page-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(37,99,235,0.32);
+}
+.ind-page-card:hover .ind-page-icon {
+  transform: scale(1.08);
+}
+.ind-page-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  transition: transform .25s;
+}
+.ind-page-name {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 7px;
+  line-height: 1.25;
+}
+.ind-page-desc {
+  font-size: 0.74rem;
+  color: var(--text-mid);
+  line-height: 1.62;
+  flex: 1;
+}
+.ind-page-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.2);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-top: 13px;
+  align-self: flex-start;
+}
+
+/* ── BUSINESS SIZE SECTION ── */
+.biz-size-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 52px 64px;
+}
+.biz-size-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+.biz-size-card {
+  border-radius: var(--r-xl);
+  padding: 34px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+.biz-size-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.biz-size-card.card-small  { background: white; border: 1px solid var(--border); }
+.biz-size-card.card-mid    { background: linear-gradient(145deg, var(--navy) 0%, var(--navy-mid) 60%, #1e2d6b 100%); border: 1px solid rgba(255,255,255,0.07); }
+.biz-size-card.card-ent    { background: linear-gradient(145deg, #1e1046 0%, #2d1870 55%, #1a2f78 100%); border: 1px solid rgba(255,255,255,0.07); }
+.biz-size-card.card-mid::before,
+.biz-size-card.card-ent::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,130,255,0.15), transparent 70%);
+}
+.bsz-eyebrow {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+.card-small  .bsz-eyebrow { color: var(--blue); }
+.card-mid    .bsz-eyebrow { color: var(--cyan); }
+.card-ent    .bsz-eyebrow { color: #a78bfa; }
+.bsz-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 2;
+}
+.card-small .bsz-title { color: var(--navy); }
+.card-mid   .bsz-title, .card-ent .bsz-title { color: white; }
+.bsz-sub {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+.card-small .bsz-sub { color: var(--text-mid); }
+.card-mid   .bsz-sub, .card-ent .bsz-sub { color: rgba(255,255,255,0.5); }
+.bsz-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 26px;
+  position: relative;
+  z-index: 2;
+}
+.bsz-stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 13px;
+  border-radius: 10px;
+  font-size: 0.77rem;
+}
+.card-small  .bsz-stat-row { background: var(--surface); border: 1px solid var(--border); }
+.card-mid    .bsz-stat-row { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); }
+.card-ent    .bsz-stat-row { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); }
+.bsz-stat-label { font-weight: 500; }
+.card-small  .bsz-stat-label { color: var(--text-mid); }
+.card-mid    .bsz-stat-label, .card-ent .bsz-stat-label { color: rgba(255,255,255,0.55); }
+.bsz-stat-val { font-weight: 700; }
+.card-small  .bsz-stat-val { color: var(--navy); }
+.card-mid    .bsz-stat-val { color: white; }
+.card-ent    .bsz-stat-val { color: #c4b5fd; }
+.bsz-saving {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 3px;
+  position: relative;
+  z-index: 2;
+}
+.card-small .bsz-saving { color: var(--green); }
+.card-mid   .bsz-saving { color: #4ade80; }
+.card-ent   .bsz-saving { color: #a78bfa; }
+.bsz-saving-lbl {
+  font-size: 0.68rem;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 2;
+}
+.card-small .bsz-saving-lbl { color: var(--text-soft); }
+.card-mid   .bsz-saving-lbl, .card-ent .bsz-saving-lbl { color: rgba(255,255,255,0.4); }
+.bsz-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.87rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all .22s;
+  position: relative;
+  z-index: 2;
+}
+.card-small .bsz-cta {
+  background: linear-gradient(135deg, var(--blue), var(--indigo));
+  color: white;
+  box-shadow: 0 5px 16px rgba(79,70,229,0.3);
+}
+.card-small .bsz-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(79,70,229,0.42); }
+.card-mid .bsz-cta {
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  color: var(--navy);
+  box-shadow: 0 5px 16px rgba(74,222,128,0.25);
+}
+.card-mid .bsz-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(74,222,128,0.38); }
+.card-ent .bsz-cta {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.22);
+}
+.card-ent .bsz-cta:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.4); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .ind-feat-grid  { grid-template-columns: repeat(2, 1fr); }
+  .ind-page-grid  { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .ind-hero, .ind-feat-section, .ind-page-section, .biz-size-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ind-hero-title { font-size: 1.85rem; }
+  .ind-feat-grid  { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ind-page-grid  { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .biz-size-grid  { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .ind-feat-grid  { grid-template-columns: 1fr; }
+  .ind-page-grid  { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<div id="header-placeholder"></div>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="ind-hero">
+  <div class="ind-hero-inner reveal">
+    <div class="ind-hero-eyebrow">
+      <div class="ind-hero-eyebrow-dot">
+        <svg width="10" height="10" viewBox="0 0 20 20" fill="white"><path d="M11 2L4 11h7l-2 7 9-10h-7l2-6z"/></svg>
+      </div>
+      Industries We Serve
+    </div>
+    <h1 class="ind-hero-title">Tailored Energy Solutions<br>for <span class="grad">Every Sector.</span></h1>
+    <p class="ind-hero-sub">From single-location small businesses to multi-state enterprise portfolios, we've structured fixed-rate electricity contracts for businesses across 15 industries. Your sector shapes how you use energy — and that's exactly how we approach your audit.</p>
+    <div class="ind-hero-pills">
+      <div class="ind-hero-pill">🏭 15 Industries Served</div>
+      <div class="ind-hero-pill">⚡ 700+ Businesses Helped</div>
+      <div class="ind-hero-pill">💰 Avg Saving 20%</div>
+      <div class="ind-hero-pill">🔒 Free to You — Always</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FEATURE STRIP ═══════════════════════════ -->
+<section class="ind-feat-section">
+  <div class="reveal">
+    <div class="sec-tag">Why We're Different</div>
+    <div class="sec-title">Built for commercial businesses, not residential.</div>
+    <div class="sec-sub">Everything we do is designed around the way commercial electricity is bought, billed, and renewed — across every industry we serve.</div>
+  </div>
+  <div class="ind-feat-grid">
+
+    <div class="ind-feat-card reveal" style="transition-delay:.04s">
+      <div class="ind-feat-icon" style="background:rgba(37,99,235,0.09)">⚡</div>
+      <div class="ind-feat-title">Deep Rate Expertise</div>
+      <div class="ind-feat-body">We understand the demand patterns, load profiles, and tariff structures unique to your industry — before you walk us through your first bill.</div>
+    </div>
+
+    <div class="ind-feat-card reveal" style="transition-delay:.08s">
+      <div class="ind-feat-icon" style="background:rgba(79,70,229,0.09)">🔗</div>
+      <div class="ind-feat-title">Wide Supplier Network</div>
+      <div class="ind-feat-body">We compare 15+ licensed electricity suppliers across all 13 markets we serve, running a full competitive RFP on your behalf at no cost.</div>
+    </div>
+
+    <div class="ind-feat-card reveal" style="transition-delay:.12s">
+      <div class="ind-feat-icon" style="background:rgba(6,182,212,0.09)">📋</div>
+      <div class="ind-feat-title">Custom Rate Plans</div>
+      <div class="ind-feat-body">No two businesses are the same. We tailor contract term, rate structure, and renewal strategy to your specific usage calendar and risk tolerance.</div>
+    </div>
+
+    <div class="ind-feat-card reveal" style="transition-delay:.16s">
+      <div class="ind-feat-icon" style="background:rgba(16,185,129,0.09)">🤝</div>
+      <div class="ind-feat-title">Dedicated Support</div>
+      <div class="ind-feat-body">Your account manager monitors your contract from signature to renewal and alerts you before your rate rolls onto the utility's default — every single time.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ INDUSTRY CARDS ═══════════════════════════ -->
+<section class="ind-page-section">
+  <div class="reveal">
+    <div class="sec-tag">Industries We Serve</div>
+    <div class="sec-title">If your business uses commercial electricity, we can help.</div>
+    <div class="sec-sub">These are the sectors where we have the deepest experience — and where we consistently deliver the largest savings.</div>
+  </div>
+  <div class="ind-page-grid">
+
+    <!-- 1 Manufacturing -->
+    <div class="ind-page-card reveal" style="transition-delay:.03s">
+      <div class="ind-page-icon" style="background:rgba(37,99,235,0.09)">🏭</div>
+      <div class="ind-page-name">Manufacturing &amp; Industrial</div>
+      <div class="ind-page-desc">High load factors, shift-based demand spikes, and large demand charges make manufacturing one of the biggest beneficiaries of a negotiated fixed-rate contract.</div>
+      <div class="ind-page-tag">💰 Avg saving 22%</div>
+    </div>
+
+    <!-- 2 Healthcare -->
+    <div class="ind-page-card reveal" style="transition-delay:.06s">
+      <div class="ind-page-icon" style="background:rgba(239,68,68,0.09)">🏥</div>
+      <div class="ind-page-name">Healthcare &amp; Medical</div>
+      <div class="ind-page-desc">Hospitals, clinics, and diagnostic labs run around the clock. We lock in predictable fixed rates so your operating budget stays as steady as your patient care.</div>
+      <div class="ind-page-tag">💰 Avg saving 19%</div>
+    </div>
+
+    <!-- 3 Education -->
+    <div class="ind-page-card reveal" style="transition-delay:.09s">
+      <div class="ind-page-icon" style="background:rgba(245,158,11,0.09)">🎓</div>
+      <div class="ind-page-name">Education &amp; Schools</div>
+      <div class="ind-page-desc">From K-12 campuses to universities, we aggregate multi-building loads into a single optimized contract that stretches every dollar of your energy budget further.</div>
+      <div class="ind-page-tag">💰 Avg saving 20%</div>
+    </div>
+
+    <!-- 4 Restaurants -->
+    <div class="ind-page-card reveal" style="transition-delay:.12s">
+      <div class="ind-page-icon" style="background:rgba(249,115,22,0.09)">🍽️</div>
+      <div class="ind-page-name">Restaurants &amp; Food Service</div>
+      <div class="ind-page-desc">Commercial kitchens, walk-in refrigeration, and ventilation systems create sizable, predictable loads — exactly the profile that earns the sharpest fixed rates.</div>
+      <div class="ind-page-tag">💰 Avg saving 20%</div>
+    </div>
+
+    <!-- 5 Retail -->
+    <div class="ind-page-card reveal" style="transition-delay:.03s">
+      <div class="ind-page-icon" style="background:rgba(16,185,129,0.09)">🛍️</div>
+      <div class="ind-page-name">Retail &amp; Multi-Location Stores</div>
+      <div class="ind-page-desc">Multi-site operators benefit most from bundled procurement. We roll all your locations into a single fixed contract, giving suppliers a reason to compete aggressively for your total load.</div>
+      <div class="ind-page-tag">💰 Avg saving 21%</div>
+    </div>
+
+    <!-- 6 Hotels -->
+    <div class="ind-page-card reveal" style="transition-delay:.06s">
+      <div class="ind-page-icon" style="background:rgba(6,182,212,0.09)">🏨</div>
+      <div class="ind-page-name">Hotels &amp; Hospitality</div>
+      <div class="ind-page-desc">Guest comfort demands continuous HVAC, lighting, and laundry loads. We stabilize your largest controllable operating expense with a guaranteed fixed rate — year-round.</div>
+      <div class="ind-page-tag">💰 Avg saving 20%</div>
+    </div>
+
+    <!-- 7 Corporate -->
+    <div class="ind-page-card reveal" style="transition-delay:.09s">
+      <div class="ind-page-icon" style="background:rgba(79,70,229,0.09)">🏢</div>
+      <div class="ind-page-name">Corporate Enterprises</div>
+      <div class="ind-page-desc">Large office footprints with complex multi-floor or multi-building loads across multiple states. We manage the full procurement process and align contract terms with your fiscal calendar.</div>
+      <div class="ind-page-tag">💰 Avg saving 19%</div>
+    </div>
+
+    <!-- 8 Nonprofits -->
+    <div class="ind-page-card reveal" style="transition-delay:.12s">
+      <div class="ind-page-icon" style="background:rgba(168,85,247,0.09)">🤲</div>
+      <div class="ind-page-name">Nonprofits &amp; Government</div>
+      <div class="ind-page-desc">Every dollar saved goes back to your mission or your community. We help nonprofit organizations and public agencies unlock exactly the same savings as their private-sector counterparts.</div>
+      <div class="ind-page-tag">💰 Avg saving 20%</div>
+    </div>
+
+    <!-- 9 Property Management -->
+    <div class="ind-page-card reveal" style="transition-delay:.03s">
+      <div class="ind-page-icon" style="background:rgba(20,184,166,0.09)">🏘️</div>
+      <div class="ind-page-name">Property Management</div>
+      <div class="ind-page-desc">We specialize in bundling common-area meters across residential and commercial properties — parking lots, lobbies, amenities — into a single optimized fixed-rate contract.</div>
+      <div class="ind-page-tag">💰 Avg saving 20%</div>
+    </div>
+
+    <!-- 10 Agriculture -->
+    <div class="ind-page-card reveal" style="transition-delay:.06s">
+      <div class="ind-page-icon" style="background:rgba(132,204,22,0.09)">🌾</div>
+      <div class="ind-page-name">Agriculture &amp; Farming</div>
+      <div class="ind-page-desc">Irrigation pumps, cold storage, grain drying, and processing equipment create large seasonal loads. We structure a contract that matches your production calendar and protects your margins.</div>
+      <div class="ind-page-tag">💰 Avg saving 18%</div>
+    </div>
+
+    <!-- 11 Tech / Data Centers -->
+    <div class="ind-page-card reveal" style="transition-delay:.09s">
+      <div class="ind-page-icon" style="background:rgba(14,165,233,0.09)">💻</div>
+      <div class="ind-page-name">Technology &amp; Data Centers</div>
+      <div class="ind-page-desc">Always-on infrastructure demands absolute rate certainty. We lock in fixed pricing for your full IT load — servers, cooling, and UPS systems — so your OPEX forecast holds for the contract term.</div>
+      <div class="ind-page-tag">💰 Avg saving 21%</div>
+    </div>
+
+    <!-- 12 Entertainment -->
+    <div class="ind-page-card reveal" style="transition-delay:.12s">
+      <div class="ind-page-icon" style="background:rgba(236,72,153,0.09)">🎭</div>
+      <div class="ind-page-name">Entertainment &amp; Event Venues</div>
+      <div class="ind-page-desc">Variable event schedules and peak-night load spikes are a challenge for standard pricing. We structure contracts that account for your unique usage calendar and protect against demand-charge surprises.</div>
+      <div class="ind-page-tag">💰 Avg saving 19%</div>
+    </div>
+
+    <!-- 13 Small Business -->
+    <div class="ind-page-card reveal" style="transition-delay:.03s">
+      <div class="ind-page-icon" style="background:rgba(245,158,11,0.09)">🏪</div>
+      <div class="ind-page-name">Small Business</div>
+      <div class="ind-page-desc">Even a single-location business can save thousands of dollars a year. We make the entire process as simple as one 10-minute phone call — no bill required, no obligation, no complexity.</div>
+      <div class="ind-page-tag">💰 Avg saving 20%</div>
+    </div>
+
+    <!-- 14 Faith & Community -->
+    <div class="ind-page-card reveal" style="transition-delay:.06s">
+      <div class="ind-page-icon" style="background:rgba(251,191,36,0.09)">⛪</div>
+      <div class="ind-page-name">Faith &amp; Community Organizations</div>
+      <div class="ind-page-desc">Churches, synagogues, mosques, and community centers deserve the same rate access as any commercial enterprise. We ensure faith organizations capture every saving available in deregulated markets.</div>
+      <div class="ind-page-tag">💰 Avg saving 19%</div>
+    </div>
+
+    <!-- 15 Cities & Public -->
+    <div class="ind-page-card reveal" style="transition-delay:.09s">
+      <div class="ind-page-icon" style="background:rgba(37,99,235,0.09)">🏛️</div>
+      <div class="ind-page-name">Cities &amp; Public Services</div>
+      <div class="ind-page-desc">Municipal buildings, street lighting, water treatment, and transit facilities. We navigate public procurement requirements and still deliver competitive fixed-rate savings on government accounts.</div>
+      <div class="ind-page-tag">💰 Avg saving 18%</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ BUSINESS SIZE SECTION ═══════════════════════════ -->
+<section class="biz-size-section">
+  <div class="reveal">
+    <div class="sec-tag">Who We Work With</div>
+    <div class="sec-title">Every business size. One process.</div>
+    <div class="sec-sub">Whether you're a single-location shop or a 50-site national operator, the audit takes 10 minutes and costs you nothing. The savings scale with your size.</div>
+  </div>
+  <div class="biz-size-grid">
+
+    <!-- Small -->
+    <div class="biz-size-card card-small reveal" style="transition-delay:.05s">
+      <div class="bsz-eyebrow">Small Business</div>
+      <div class="bsz-title">1–3 Locations</div>
+      <div class="bsz-sub">Single-site or small multi-location operators where energy is a significant but underexamined overhead cost.</div>
+      <div class="bsz-stats">
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Monthly energy spend</span>
+          <span class="bsz-stat-val">$500 – $3,000</span>
+        </div>
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Typical load size</span>
+          <span class="bsz-stat-val">Under 50 kW</span>
+        </div>
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Audit duration</span>
+          <span class="bsz-stat-val">10 minutes</span>
+        </div>
+      </div>
+      <div class="bsz-saving">$3k – $10k</div>
+      <div class="bsz-saving-lbl">Typical annual saving</div>
+      <button class="bsz-cta" onclick="window.location='index.html#nlSec'">Get My Free Small Business Audit</button>
+    </div>
+
+    <!-- Midsize -->
+    <div class="biz-size-card card-mid reveal" style="transition-delay:.10s">
+      <div class="bsz-eyebrow">Midsize Business</div>
+      <div class="bsz-title">4–20 Locations</div>
+      <div class="bsz-sub">Multi-location operators with bundleable loads — restaurants, retailers, clinics, hotels — where our network delivers the most competitive rates.</div>
+      <div class="bsz-stats">
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Monthly energy spend</span>
+          <span class="bsz-stat-val">$3,000 – $20,000</span>
+        </div>
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Typical load size</span>
+          <span class="bsz-stat-val">50 – 500 kW</span>
+        </div>
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Bundled contract</span>
+          <span class="bsz-stat-val">All sites, one deal</span>
+        </div>
+      </div>
+      <div class="bsz-saving">$10k – $40k</div>
+      <div class="bsz-saving-lbl">Typical annual saving</div>
+      <button class="bsz-cta" onclick="window.location='index.html#nlSec'">Get My Free Midsize Audit</button>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="biz-size-card card-ent reveal" style="transition-delay:.15s">
+      <div class="bsz-eyebrow">Enterprise</div>
+      <div class="bsz-title">20+ Locations</div>
+      <div class="bsz-sub">Large multi-state portfolios with complex tariff structures, demand management requirements, and multi-year procurement strategies.</div>
+      <div class="bsz-stats">
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Monthly energy spend</span>
+          <span class="bsz-stat-val">$20,000+</span>
+        </div>
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Typical load size</span>
+          <span class="bsz-stat-val">500 kW+</span>
+        </div>
+        <div class="bsz-stat-row">
+          <span class="bsz-stat-label">Multi-state strategy</span>
+          <span class="bsz-stat-val">All markets covered</span>
+        </div>
+      </div>
+      <div class="bsz-saving">$40k+</div>
+      <div class="bsz-saving-lbl">Typical annual saving</div>
+      <button class="bsz-cta" onclick="window.location='index.html#nlSec'">Request Enterprise Consultation</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PROOF STRIP ═══════════════════════════ -->
+<section class="proof-section reveal">
+  <div class="proof-inner">
+    <div class="proof-stat">
+      <div class="proof-num"><span class="pa">15</span></div>
+      <div class="proof-lbl">Industries with<br>dedicated expertise</div>
+    </div>
+    <div class="proof-sep"></div>
+    <div class="proof-stat">
+      <div class="proof-num"><span class="pa">700+</span></div>
+      <div class="proof-lbl">Businesses served<br>across all sectors</div>
+    </div>
+    <div class="proof-sep"></div>
+    <div class="proof-stat">
+      <div class="proof-num"><span class="pa">20%</span></div>
+      <div class="proof-lbl">Average reduction in<br>annual energy cost</div>
+    </div>
+    <div class="proof-sep"></div>
+    <div class="proof-stat">
+      <div class="proof-num"><span class="pa">$0</span></div>
+      <div class="proof-lbl">Cost to you —<br>broker fee paid by supplier</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CLOSING CTA ═══════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-card reveal">
+    <div class="cta-title">Ready to see what your industry could be saving?</div>
+    <div class="cta-sub">Tell us your industry and state. We'll run a free audit, compare suppliers, and show you exactly what a fixed-rate contract would save your business — no bill required, no obligation.</div>
+    <div class="cta-btns">
+      <button class="cta-btn-main" onclick="window.location='index.html#nlSec'">Get My Free Industry Audit</button>
+      <button class="cta-btn-ghost" onclick="window.location='index.html#calcCard'">Try the Savings Calculator</button>
+    </div>
+    <div class="cta-guarantee">🔒 No obligation · No bill needed · Completely free to you · Response within 2 hours</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<div id="footer-placeholder"></div>
+
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
